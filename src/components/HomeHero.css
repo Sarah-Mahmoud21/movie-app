@@ -1,0 +1,22 @@
+.home {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  text-align: center;
+}
+
+.home img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+}
+
+.home p {
+  position: absolute; 
+  top: 90%; 
+  transform: translate(-50%, -50%); 
+  color: white;
+  font-weight:500;
+}

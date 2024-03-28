@@ -1,0 +1,15 @@
+.header{
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
+    height:50px;
+
+}
+.header h1{
+    margin: 0%;
+    margin-left: 5%;
+    
+}
+.header h1 .movies{
+    font-family: cursive;
+    font-style: italic;
+}

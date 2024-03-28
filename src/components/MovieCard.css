@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+.back{
+    position: absolute;
+height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container{
+    position: absolute;
+    top:10%;
+    z-index:2;
+}
+.card {
+    position: relative;
+    margin: auto;
+    display:flex;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
+  }
+  .card img {
+    width: 30%;
+    margin-right:10px
+  }
+  
+
+
+  
