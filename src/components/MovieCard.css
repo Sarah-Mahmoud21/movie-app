@@ -26,5 +26,27 @@ height: 100%;
   }
   
 
-
+.actors{
+    margin-top:10%;
+    margin-left:3%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.actor{
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
+    margin-bottom:3%;
+    margin-right:10px;
+}
+  .actor img{ 
+    width :30%;
+    margin-right:5px;
+  }
+  .actor a{
+    color:white;
+    display: inline-flex;
+    text-decoration: none;
+  }
   

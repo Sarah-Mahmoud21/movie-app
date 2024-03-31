@@ -3,8 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
- 
-  text-align: center;
 }
 
 .home img {
@@ -15,8 +13,8 @@
 
 .home p {
   position: absolute; 
-  top: 90%; 
-  transform: translate(-50%, -50%); 
+  top: 50%; 
+  left:5%;
   color: white;
   font-weight:500;
 }

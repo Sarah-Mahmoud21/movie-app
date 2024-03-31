@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../components/movie.css";
 import { Link } from "react-router-dom";
-import MovieCard from "./MovieCard";
 import Header from "../components/HeaderMovie";
 import HomeHero from "./HomeHero";
 
@@ -23,7 +22,7 @@ function Movie() {
   return (
     <>
     <Header/>
-    <HomeHero movie={movieList[7]}/>
+    <HomeHero movie={movieList[5]}/>
       <h1>Popular Movies</h1>
       <div className="posters">
         {movieList.map((movie) => (
