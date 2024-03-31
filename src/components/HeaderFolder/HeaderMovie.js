@@ -1,4 +1,4 @@
-import '../components/Header.css'
+import '../HeaderFolder/Header.css'
 function  Header() {
     return (
         <div className="header">

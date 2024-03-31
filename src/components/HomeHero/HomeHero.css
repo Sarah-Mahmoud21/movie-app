@@ -3,18 +3,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .home img {
   width: 100%;
-  height: auto; 
+  height:580px;
   object-fit: cover; 
 }
 
 .home p {
   position: absolute; 
   top: 50%; 
-  left:5%;
+  left:50%;
+  transform: translate(-50%,-50%);
   color: white;
-  font-weight:500;
+  font-size: 80%;
+  
 }

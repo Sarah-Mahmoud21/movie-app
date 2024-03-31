@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../components/MovieCard.css";
+import "./MovieCard.css";
 import { Link } from "react-router-dom";
-import Header from "../components/HeaderMovie";
+import Header from "../HeaderFolder/HeaderMovie";
 
 function MovieCard() {
   const { id } = useParams();
@@ -40,12 +40,15 @@ function MovieCard() {
 
   if (!movie) return <div>Loading...</div>;
 
+  // Calculate progress percentage based on IMDB rating
+  const progressPercentage = (movie.vote_average / 10) * 100;
+
   return (
     <>
       <Header />
       <img
         className="back"
-        src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
         alt={movie.title}
       />
       <div className="container">
@@ -59,7 +62,11 @@ function MovieCard() {
             <h3>polt</h3>
             <p>{movie.overview}</p>
             <h3>IMDB RATING</h3>
-            <p>{movie.vote_average}</p>
+            <div className="holder" style={{backgroundColor: 'white',margin:'5px'}}>
+            <div className="progress-bar" style={{ width: `${progressPercentage}%`, backgroundColor: 'green' }}>
+              <span>{movie.vote_average}</span>
+            </div>
+            </div>
             <h3>DIRECTOR</h3>
             <p>Director: {director}</p>
           </div>
@@ -67,12 +74,12 @@ function MovieCard() {
         <div className="actors">
           {actors.map((actor) => (
             <div key={actor.id} className="actor">
-               <Link to={`/actor/${actor.id}`}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
-                alt={actor.name}
-              />
-              <p>{actor.name}</p>
+              <Link to={`/actor/${actor.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
+                  alt={actor.name}
+                />
+                <p>{actor.name}</p>
               </Link>
             </div>
           ))}

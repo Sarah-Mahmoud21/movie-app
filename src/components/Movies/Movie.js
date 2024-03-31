@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../components/movie.css";
+import "./movie.css";
 import { Link } from "react-router-dom";
-import Header from "../components/HeaderMovie";
-import HomeHero from "./HomeHero";
+import Header from "../HeaderFolder/HeaderMovie";
+import HomeHero from "../HomeHero/HomeHero";
 
 
 function Movie() {

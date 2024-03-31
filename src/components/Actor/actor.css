@@ -1,0 +1,65 @@
+.actor-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.actor-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.actor-bio {
+  margin-bottom: 20px;
+}
+
+.actor-picture {
+  width: 100%; /* Adjusted for responsiveness */
+  max-width: 200px; /* Added max-width for responsiveness */
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for responsiveness */
+  grid-gap: 20px;
+}
+
+.movie {
+  text-align: center;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.personal {
+  width: 100%; /* Adjusted for responsiveness */
+  max-width: 200px; /* Added max-width for responsiveness */
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .actor-picture {
+    max-width: 250px;
+  }
+
+  .personal {
+    max-width: 250px;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .actor-container {
+    padding: 40px;
+  }
+}

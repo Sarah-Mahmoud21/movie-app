@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./actor.css"; // Import CSS file for styling
-import Header from "./HeaderMovie";
+import { Link } from "react-router-dom";
+
+import Header from "../HeaderFolder/HeaderMovie";
+import placeholderImage from "../assets/placeholder.jpg"; // Import your placeholder image
 
 function Actor() {
   const { id } = useParams();
@@ -20,7 +23,7 @@ function Actor() {
     fetch(`https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=8c2cd4aac7c15daf871570a653aab68a&language=en-US`)
       .then((res) => res.json())
       .then((moviesData) => {
-        setMovies(moviesData.cast .slice(0, 5));
+        setMovies(moviesData.cast);
       });
   }, [id]);
 
@@ -31,18 +34,21 @@ function Actor() {
         <Header/>
     <h1>{actor.name}</h1>
     <img className="personal"
-      src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
+      src={actor.profile_path ? `https://image.tmdb.org/t/p/w500${actor.profile_path}` : placeholderImage}
       alt={actor.name}
     />
     <p>Biography: {actor.biography}</p>
       <div className="movie-list">
         {movies.map((movie) => (
           <div key={movie.id} className="movie">
+             <Link to={`/movie/${movie.id}`}>
             <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt={movie.title}
+              src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : placeholderImage}
+              alt={movie.title}  
             />
+            </Link>
             <p>{movie.title}</p>
+           
           </div>
         ))}
       </div>
