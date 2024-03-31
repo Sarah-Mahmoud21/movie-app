@@ -1,4 +1,6 @@
-
+body{
+    overflow-x: hidden;
+}
 .posters{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -7,3 +9,16 @@
     width:90%;
     margin:10px;
 }
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 10px; /* Adjust as needed */
+    background-color: lightblue;
+    border-radius: 20px;
+    font-size: 30px;
+    color:white;
+    width:200px
+  }
