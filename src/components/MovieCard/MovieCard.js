@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import "./MovieCard.css";
 import { Link } from "react-router-dom";
 import Header from "../HeaderFolder/HeaderMovie";
+import placeholderImage from "../assets/placeholder.jpg"; // Import your placeholder image
+
 
 function MovieCard() {
   const { id } = useParams();
@@ -76,8 +78,8 @@ function MovieCard() {
             <div key={actor.id} className="actor">
               <Link to={`/actor/${actor.id}`}>
                 <img
-                  src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
-                  alt={actor.name}
+                  src={actor.profile_path ? `https://image.tmdb.org/t/p/w500${actor.profile_path}` : placeholderImage}
+                  alt={actor.name}       
                 />
                 <p>{actor.name}</p>
               </Link>

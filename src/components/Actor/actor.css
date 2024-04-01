@@ -23,8 +23,7 @@
 
 .movie-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted for responsiveness */
-  grid-gap: 20px;
+  grid-template-columns: 50% 50%;
 }
 
 .movie {
@@ -32,8 +31,9 @@
 }
 
 .movie img {
-  width: 100%;
+  width: 200px;
   height: auto;
+  margin-right:10px;
   margin-bottom: 10px;
 }
 
@@ -51,6 +51,9 @@
   .actor-picture {
     max-width: 250px;
   }
+  .movie-list{
+    grid-template-columns: 30% 30% 30%;
+  }
 
   .personal {
     max-width: 250px;
@@ -61,5 +64,8 @@
 @media only screen and (min-width: 1024px) {
   .actor-container {
     padding: 40px;
+  }
+  .movie-list{
+    grid-template-columns: 25% 25% 25% 25%;
   }
 }
